@@ -1,0 +1,63 @@
+&share
+ wrf_core                     = 'ARW'
+ max_dom                      =  2
+ start_year                   =
+ start_month                  =
+ start_day                    =
+ start_hour                   =
+ end_year                     =
+ end_month                    =
+ end_day                      =
+ end_hour                     =
+ start_date                   = '2000-01-01_00:00:00', '2000-01-01_00:00:00',
+ end_date                     = '2000-01-02_00:00:00', '2000-01-01_00:00:00',
+ interval_seconds             =  21600
+ active_grid                  =
+ io_form_geogrid              =  2
+ opt_output_from_geogrid_path = '/home/zhangc/WPS/output_geogrid/'
+ debug_level                  =
+/
+
+&geogrid
+ parent_id            =  1,         1,
+ parent_grid_ratio    =  1,         3,
+ i_parent_start       =  1,         27,
+ j_parent_start       =  1,         27,
+ s_we                 =  1,         1,
+ e_we                 =  154,       187,
+ s_sn                 =  1,         1,
+ e_sn                 =  101,       97,
+ geog_data_res        = 'default', 'default',
+ dx                   =  0.44
+ dy                   =  0.44
+ map_proj             = 'lat-lon'
+ ref_lat              =  47.82
+ ref_lon              =  74.64 
+ ref_x                =
+ ref_y                =
+ truelat1             =
+ truelat2             =
+ stand_lon            = -74.64
+ pole_lat             =  42.18
+ pole_lon             =  180
+ geog_data_path       = '/home/zhangc/data/data_input/WPS_GEOG/'
+ opt_geogrid_tbl_path =
+/
+
+&ungrib
+ out_format  =
+ prefix      =
+ add_lvls    =
+ interp_type =
+ new_plvl    =
+ pmin        =
+/
+
+&metgrid
+ fg_name                      = '/home/zhangc/WPS/input_metdata/CCSM4_CMIP5_MOAR_BC_20THC'
+ constants_name               =
+ io_form_metgrid              = 2
+ opt_output_from_metgrid_path = '/home/zhangc/WPS/output_metgrid/'
+ opt_metgrid_tbl_path         =
+ process_only_bdy             =
+/
