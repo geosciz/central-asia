@@ -84,7 +84,7 @@
  s_sn                    = 1,          1,
  e_sn                    = 101,        97,
  s_vert                  = 1,          1,
- e_vert                  = 33,         33,
+ e_vert                  = 51,         51,
  dx                      = 48918.0898, 16306.0303,
  dy                      = 48918.0898, 16306.0303,
  ztop                    =
@@ -118,7 +118,7 @@
  use_maxw_level          =
  use_trop_level          =
  interp_theta            =
- p_top_requested         = 5000
+ p_top_requested         = 1000
  interp_type             =
  extrap_type             =
  t_extrap_type           =
@@ -168,9 +168,8 @@
  /
 
  &physics
- physics_suite            = 'CONUS'
  chem_opt                 =
- mp_physics               = -1,  -1,
+ mp_physics               = 6,  6
  do_radar_ref             =
  mp_zero_out              =
  mp_zero_out_thresh       =
@@ -192,9 +191,9 @@
  nssl_rho_qs              =
  no_mp_heating            =
  use_mp_re                =
- ra_lw_physics            = -1,  -1,
- ra_sw_physics            = -1,  -1,
- radt                     =  30,  30,
+ ra_lw_physics            = 3,  3
+ ra_sw_physics            = 3,  3,
+ radt                     = 30, 30,
  ra_call_offset           =
  co2tf                    =
  cam_abs_freq_s           =
@@ -214,15 +213,15 @@
  aer_asy_opt              =
  aer_asy_val              =
  aer_type                 =
- sf_sfclay_physics        = -1,  -1,
+ sf_sfclay_physics        = 1,  1,
  iz0tlnd                  =
- sf_surface_physics       = -1,  -1,
- sf_urban_physics         =  0,   0,
+ sf_surface_physics       = 2,  2,
+ sf_urban_physics         =
  ua_physics               =
  num_soil_layers          =
- bl_pbl_physics           = -1,  -1,
+ bl_pbl_physics           = 1,  1,
  mfshconv                 =
- bldt                     =  0,   0,
+ bldt                     = 0,  0,
  topo_wind                =
  bl_mynn_tkebudget        =
  bl_mynn_tkeadvect        =
@@ -243,8 +242,8 @@
  mosaic_cat               =
  grav_settling            =
  ysu_topdown_pblmix       =
- cu_physics               = -1,  -1,
- cudt                     =  5,   5,
+ cu_physics               = 1,  1,
+ cudt                     = 5,  5,
  kfeta_trigger            = 
  ishallow                 =
  cu_diag                  =
@@ -275,22 +274,22 @@
  isfflx                   =
  ideal_xland              =
  ifsnow                   =
- icloud                   =  1
+ icloud                   =
  swrad_scat               =
  surface_input_source     =
  pxlsm_smois_init         =
- num_land_cat             =  21
+ num_land_cat             =
  num_soil_cat             =
  usemonalb                =
  rdmaxalb                 =
  rdlai2d                  =
  seaice_threshold         =
- sst_update               =
- tmn_update               =
+ sst_update               = 1,  1,
+ tmn_update               = 1,  1,
  lagday                   =
  sst_skin                 =
- bucket_mm                =
- bucket_j                 =
+ bucket_mm                = 100
+ bucket_j                 = 1.e9
  slope_rad                =
  topo_shading             =
  shadlen                  =
@@ -312,10 +311,10 @@
  prec_acc_dt              =
  traj_opt                 =
  num_traj                 =
- sf_lake_physics          =
+ sf_lake_physics          = 1,  1,
  lakedepth_default        =
  lake_min_elev            =
- use_lake_depth           =
+ use_lake_depth           = 1,  1,
  lightning_option         =
  lightning_dt             =
  lightning_start_seconds  =
@@ -341,35 +340,113 @@
  /
 
  &dynamics
- hybrid_opt      =  2, 
- w_damping       =  0,
- diff_opt        =  1,      1,
- km_opt          =  4,      4,
- diff_6th_opt    =  0,      0,
- diff_6th_factor =  0.12,   0.12,
- base_temp       =  290.
- damp_opt        =  3,
- zdamp           =  5000.,  5000.,
- dampcoef        =  0.2,    0.2,
- khdif           =  0,      0,
- kvdif           =  0,      0,
- non_hydrostatic = .true., .true.,
- moist_adv_opt   =  1,      1,
- scalar_adv_opt  =  1,      1,
- gwd_opt         =  1,
+ hybrid_opt              =  2
+ etac                    =
+ rk_ord                  =
+ diff_opt                =  1,      1,
+ km_opt                  =  4,      4,
+ diff_6th_opt            =  0,      0,
+ diff_6th_factor         =  0.12,   0.12,
+ diff_6th_slopeopt       =
+ diff_6th_thresh         =
+ damp_opt                =  3
+ use_theta_m             =
+ use_q_diabatic          =
+ c_s                     =
+ c_k                     =
+ zdamp                   =  5000,   5000,
+ dampcoef                =  0.2,    0.2,
+ w_damping               =
+ base_pres               =
+ base_temp               =  290
+ base_lapse              =
+ iso_temp                =
+ base_pres_start         =
+ base_lapse_start        =
+ use_baseparm_fr_nml     =
+ use_input_w             =
+ khdif                   =  0,      0,
+ kvdif                   =  0,      0,
+ smdiv                   =
+ emdiv                   =
+ epssm                   =
+ non_hydrostatic         = .true., .true.,
+ pert_coriolis           =
+ top_lid                 =
+ mix_full_fields         =
+ mix_isotropic           =
+ mix_upper_bound         =
+ h_mom_adv_order         =
+ v_mom_adv_order         =
+ h_sca_adv_order         =
+ v_sca_adv_order         =
+ time_step_sound         =
+ moist_adv_opt           =  1,      1,
+ scalar_adv_opt          =  1,      1,
+ tke_adv_opt             =
+ moist_mix2_off          =
+ chem_mix2_off           =
+ tracer_mix2_off         =
+ scalar_mix2_off         =
+ tke_mix2_off            =
+ moist_mix6_off          =
+ chem_mix6_off           =
+ tracer_mix6_off         =
+ scalar_mix6_off         =
+ tke_mix6_off            =
+ chem_adv_opt            =
+ tracer_adv_opt          =
+ momentum_adv_opt        =
+ tke_drag_coefficient    =
+ tke_heat_flux           =
+ fft_filter_lat          =
+ coupled_filtering       =
+ pos_def                 =
+ swap_pole_with_next_j   =
+ actual_distance_average =
+ gwd_opt                 =  1
+ do_avgflx_em            =
+ do_avgflx_cugd          =
+ sfs_opt                 =
+ m_opt                   =
+ tracer_opt              =
+ rad_nudge               =
  /
 
  &bdy_control
- spec_bdy_width =  5,
- specified      = .true.
+ spec_bdy_width    =  10
+ spec_zone         =  1
+ relax_zone        =  9
+ specified         = .true.
+ spec_exp          =
+ periodic_x        =
+ symmetric_xs      =
+ symmetric_xe      =
+ open_xs           =
+ open_xe           =
+ periodic_y        =
+ symmetric_ys      =
+ symmetric_ye      =
+ open_ys           =
+ open_ye           =
+ nested            =
+ polar             =
+ constant_bc       =
+ spec_bdy_final_mu =
+ have_bcs_moist    =
+ have_bcs_scalar   =
  /
 
  &namelist_quilt
- nio_tasks_per_group = 0,
- nio_groups          = 1,
+ nio_tasks_per_group =
+ nio_groups          =
  /
  
  &grib2
+ background_proc_id =
+ forecast_proc_id   =
+ production_status  =
+ compression        =
  /
 
  &dfi_control
