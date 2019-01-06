@@ -1,25 +1,25 @@
  &time_control
- run_days                =  1
+ run_days                =  31
  run_hours               =
  run_minutes             =
  run_seconds             =
  start_year              =  2000,   2000,
- start_month             =  01,     01,
+ start_month             =  12,     12,
  start_day               =  01,     01,
  start_hour              =  00,     00,
  start_minute            =
  start_second            =
- end_year                =  2000,   2000,
+ end_year                =  2001,   2001,
  end_month               =  01,     01,
- end_day                 =  02,     02,
+ end_day                 =  01,     01,
  end_hour                =  00,     00,
  end_minute              =
  end_second              =
  interval_seconds        =  21600
  input_from_file         = .true., .true.,
  fine_input_stream       =
- history_interval        =  360,    360,
- history_interval_d      =
+ history_interval        =
+ history_interval_d      =  1,      1,
  history_interval_h      =
  history_interval_m      =
  history_interval_s      =
@@ -74,7 +74,7 @@
  /
 
  &domains
- time_step               = 180,
+ time_step               = 150,
  time_step_fract_num     =
  time_step_fract_den     =
  time_step_dfi           =
@@ -93,7 +93,7 @@
  i_parent_start          = 1,          27,
  j_parent_start          = 1,          27,
  parent_grid_ratio       = 1,          3,
- parent_time_step_ratio  = 1,          1,
+ parent_time_step_ratio  = 1,          3,
  feedback                = 1
  smooth_option           = 0
  hypsometric_opt         =
@@ -187,7 +187,7 @@
  nssl_cnor                =
  nssl_cnos                =
  nssl_rho_qh              =
- nssl_rho_ghl             =
+!nssl_rho_ghl             =
  nssl_rho_qs              =
  no_mp_heating            =
  use_mp_re                =
@@ -217,7 +217,7 @@
  iz0tlnd                  =
  sf_surface_physics       = 2,  2,
  sf_urban_physics         =
- ua_physics               =
+ ua_phys                  =
  num_soil_layers          =
  bl_pbl_physics           = 1,  1,
  mfshconv                 =
@@ -257,10 +257,10 @@
  nsas_dx_factor           =
  shallowcu_forced_ra      =
  numbins                  =
- thBinSize                =
- rBinSize                 =
- minDeepFreq              =
- minShallowFreq           =
+ thbinsize                =
+ rbinsize                 =
+ mindeepfreq              =
+ minshallowfreq           =
  shcu_aerosols_opt        =
  aercu_opt                =
  aercu_fct                =
@@ -284,8 +284,8 @@
  rdmaxalb                 =
  rdlai2d                  =
  seaice_threshold         =
- sst_update               = 1,  1,
- tmn_update               = 1,  1,
+ sst_update               =
+ tmn_update               =
  lagday                   =
  sst_skin                 =
  bucket_mm                = 100
@@ -298,7 +298,7 @@
  oml_hml0                 =
  oml_gamma                =
  oml_relaxation_time      =
- ocean_levels             =
+!ocean_levels             =
  isftcflx                 =
  fractional_seaice        =
  seaice_albedo_opt        =
@@ -310,11 +310,11 @@
  seaice_thickness_default =
  prec_acc_dt              =
  traj_opt                 =
- num_traj                 =
+!num_traj                 =
  sf_lake_physics          = 1,  1,
  lakedepth_default        =
  lake_min_elev            =
- use_lake_depth           = 1,  1,
+ use_lakedepth            = 1,  1,
  lightning_option         =
  lightning_dt             =
  lightning_start_seconds  =
@@ -361,9 +361,9 @@
  base_temp               =  290
  base_lapse              =
  iso_temp                =
- base_pres_start         =
- base_lapse_start        =
- use_baseparm_fr_nml     =
+ base_pres_strat         =
+ base_lapse_strat        =
+!use_baseparm_fr_nml     =
  use_input_w             =
  khdif                   =  0,      0,
  kvdif                   =  0,      0,
