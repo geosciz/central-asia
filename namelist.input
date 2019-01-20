@@ -1,10 +1,10 @@
  &time_control
- run_days                =  31
+ run_days                =  365
  run_hours               =
  run_minutes             =
  run_seconds             =
  start_year              =  2000,   2000,
- start_month             =  12,     12,
+ start_month             =  01,     01,
  start_day               =  01,     01,
  start_hour              =  00,     00,
  start_minute            =
@@ -36,7 +36,7 @@
  auxinput4_interval      =
  io_form_auxinput4       =
  io_form_history         =  2
- io_form_restart         =  2
+ io_form_restart         =
  io_form_input           =  2
  io_form_boundary        =  2
  ncd_nofill              =
