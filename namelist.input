@@ -1,15 +1,15 @@
  &time_control
- run_days                =  365
+ run_days                =  3650
  run_hours               =
  run_minutes             =
  run_seconds             =
- start_year              =  2000,   2000,
+ start_year              =  1996,   1996,
  start_month             =  01,     01,
  start_day               =  01,     01,
  start_hour              =  00,     00,
  start_minute            =
  start_second            =
- end_year                =  2001,   2001,
+ end_year                =  2006,   2006,
  end_month               =  01,     01,
  end_day                 =  01,     01,
  end_hour                =  00,     00,
@@ -19,8 +19,8 @@
  input_from_file         = .true., .true.,
  fine_input_stream       =
  history_interval        =
- history_interval_d      =  1,      1,
- history_interval_h      =
+ history_interval_d      =
+ history_interval_h      =  6,      6,
  history_interval_m      =
  history_interval_s      =
  frames_per_outfile      =  1,      1,
@@ -450,48 +450,48 @@
  /
 
  &dfi_control
- dfi_opt
- dfi_nfilter
- dfi_write_filtered_input
- dfi_write_dfi_history
- dfi_cutoff_seconds
- dfi_time_dim
- dfi_bckstop_year
- dfi_bckstop_month
- dfi_bckstop_day
- dfi_bckstop_hour
- dfi_bckstop_minute
- dfi_bckstop_second
- dfi_fwdstop_year
- dfi_fwdstop_month
- dfi_fwdstop_day
- dfi_fwdstop_hour
- dfi_fwdstop_minute
- dfi_fwdstop_second
- dfi_radar
+ dfi_opt                  =
+ dfi_nfilter              =
+ dfi_write_filtered_input =
+ dfi_write_dfi_history    =
+ dfi_cutoff_seconds       =
+ dfi_time_dim             =
+ dfi_bckstop_year         =
+ dfi_bckstop_month        =
+ dfi_bckstop_day          =
+ dfi_bckstop_hour         =
+ dfi_bckstop_minute       =
+ dfi_bckstop_second       =
+ dfi_fwdstop_year         =
+ dfi_fwdstop_month        =
+ dfi_fwdstop_day          =
+ dfi_fwdstop_hour         =
+ dfi_fwdstop_minute       =
+ dfi_fwdstop_second       =
+!dfi_radar                =
  /
 
  &scm
- scm_force
- scm_force_dx
- num_force_layers
- scm_lu_index
- scm_isltyp
- scm_vegfra
- scm_canwat
- scm_lat
- scm_lon
- scm_th_adv
- scm_wind_adv
- scm_qv_adv
- scm_vert_adv
- scm_ql_adv
- num_force_soil_layers
- scm_soilt_force
- scm_soilq_force
- scm_force_th_largescale
- scm_force_qv_largescale
- scm_force_wind_largescale
+ scm_force                 =
+ scm_force_dx              =
+ num_force_layers          =
+ scm_lu_index              =
+ scm_isltyp                =
+ scm_vegfra                =
+ scm_canwat                =
+ scm_lat                   =
+ scm_lon                   =
+ scm_th_adv                =
+ scm_wind_adv              =
+ scm_qv_adv                =
+ scm_vert_adv              =
+ scm_ql_adv                =
+ num_force_soil_layers     =
+ scm_soilt_force           =
+ scm_soilq_force           =
+ scm_force_th_largescale   =
+ scm_force_qv_largescale   =
+ scm_force_wind_largescale =
  /
 
  &tc
@@ -531,7 +531,7 @@
  afwa_buoy_opt       =
  afwa_ptype_ccn_tmp  =
  afwa_ptype_tot_melt =
- progn               =
+!progn               =
  /
 
  &ideal

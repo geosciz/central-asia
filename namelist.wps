@@ -9,8 +9,8 @@
  end_month                    =
  end_day                      =
  end_hour                     =
- start_date                   = '1976-01-01_00:00:00', '1976-01-01_00:00:00',
- end_date                     = '2006-01-01_00:00:00', '1976-01-01_00:00:00',
+ start_date                   = '1996-01-01_00:00:00', '1996-01-01_00:00:00',
+ end_date                     = '2006-01-01_00:00:00', '1996-01-01_00:00:00',
  interval_seconds             =  21600
  active_grid                  =
  io_form_geogrid              =
@@ -54,7 +54,7 @@
 /
 
 &metgrid
- fg_name                      = '/home/zhangc/WPS/input_metdata/CCSM4_CMIP5_MOAR_BC_20THC'
+ fg_name                      = '/home/zhangc/WPS/input_intermediate/CCSM4_CMIP5_MOAR_BC_20THC'
  constants_name               =
  io_form_metgrid              =
  opt_output_from_metgrid_path = '/home/zhangc/WPS/output_metgrid/'
