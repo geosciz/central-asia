@@ -519,7 +519,7 @@
  use_q_diabatic          =
  c_s                     =
  c_k                     =
- zdamp                   =  5000,   5000,
+ zdamp                   =
  dampcoef                =  0.2,    0.2,
  w_damping               =
  base_pres               =
