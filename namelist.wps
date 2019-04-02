@@ -21,7 +21,7 @@
  stand_lon         = -74.64
  pole_lat          =  42.18
  pole_lon          =  180
- geog_data_path    = '/home/zhangc/data/data_input/WPS_GEOG/'
+ geog_data_path    = '/home/zhangc/data/i/WPS_GEOG/'
 /
 
 &metgrid

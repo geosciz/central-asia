@@ -49,6 +49,7 @@
 /
 
 &dynamics
+ diff_opt = 1,   1,
  km_opt   = 4,   4,
  damp_opt = 3
  dampcoef = 0.2, 0.2,
